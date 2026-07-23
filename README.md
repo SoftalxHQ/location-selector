@@ -4,6 +4,12 @@ Framework-agnostic **country → state/region → LGA/district → town** locati
 
 JSON is the source of truth — use it from PHP, Python, Ruby on Rails, or any other language. TypeScript helpers are included for Node and browser apps.
 
+## Live demo
+
+Try the cascading picker in the browser: **[https://lsdemo.vercel.app/](https://lsdemo.vercel.app/)**
+
+[![Location selector demo](https://cdn.jsdelivr.net/npm/@softalxhq/location-selector@0.2.1/demo.jpg)](https://lsdemo.vercel.app/)
+
 ## Install
 
 ```bash

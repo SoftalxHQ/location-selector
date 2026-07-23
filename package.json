@@ -1,9 +1,10 @@
 {
   "name": "@softalxhq/location-selector",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Framework-agnostic country → state/region → LGA/district → town location data (Nigeria, Ghana)",
   "license": "MIT",
   "author": "Alex",
+  "homepage": "https://lsdemo.vercel.app/",
   "keywords": [
     "location",
     "nigeria",
@@ -34,7 +35,8 @@
   "files": [
     "dist",
     "data",
-    "README.md"
+    "README.md",
+    "demo.jpg"
   ],
   "engines": {
     "node": ">=18"
