@@ -1,10 +1,7 @@
 [
-  {
-    "code": "NG",
-    "name": "Nigeria"
-  },
-  {
-    "code": "GH",
-    "name": "Ghana"
-  }
+  { "code": "NG", "name": "Nigeria" },
+  { "code": "GH", "name": "Ghana" },
+  { "code": "US", "name": "United States" },
+  { "code": "GB", "name": "United Kingdom" },
+  { "code": "KE", "name": "Kenya" }
 ]

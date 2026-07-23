@@ -7,11 +7,14 @@ import {
 } from "../src/index.js";
 
 describe("getCountries", () => {
-  it("includes Nigeria and Ghana", () => {
+  it("includes supported countries", () => {
     const list = getCountries();
     expect(list).toEqual([
       { code: "NG", name: "Nigeria" },
       { code: "GH", name: "Ghana" },
+      { code: "US", name: "United States" },
+      { code: "GB", name: "United Kingdom" },
+      { code: "KE", name: "Kenya" },
     ]);
   });
 });
