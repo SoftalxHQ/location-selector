@@ -1,5 +1,5 @@
 {
-  "name": "@softalx/location-selector",
+  "name": "@softalxhq/location-selector",
   "version": "0.2.0",
   "description": "Framework-agnostic country → state/region → LGA/district → town location data (Nigeria, Ghana)",
   "license": "MIT",

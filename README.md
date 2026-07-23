@@ -1,4 +1,4 @@
-# @softalx/location-selector
+# @softalxhq/location-selector
 
 Framework-agnostic **country → state/region → LGA/district → town** location data for **Nigeria** and **Ghana**.
 
@@ -7,9 +7,9 @@ JSON is the source of truth — use it from PHP, Python, Ruby on Rails, or any o
 ## Install
 
 ```bash
-npm install @softalx/location-selector
-pnpm add @softalx/location-selector
-yarn add @softalx/location-selector
+npm install @softalxhq/location-selector
+pnpm add @softalxhq/location-selector
+yarn add @softalxhq/location-selector
 ```
 
 ## Hierarchy
@@ -29,7 +29,7 @@ import {
   getStates,
   getLgas,
   getTowns,
-} from "@softalx/location-selector";
+} from "@softalxhq/location-selector";
 
 getCountries();
 // [{ code: "NG", name: "Nigeria" }, { code: "GH", name: "Ghana" }]
@@ -58,9 +58,9 @@ Name matching is case-insensitive. Unknown country/state/LGA returns `[]`.
 ### Raw JSON (JS)
 
 ```ts
-import ng from "@softalx/location-selector/data/ng.json";
-import gh from "@softalx/location-selector/data/gh.json";
-import countries from "@softalx/location-selector/data/countries.json";
+import ng from "@softalxhq/location-selector/data/ng.json";
+import gh from "@softalxhq/location-selector/data/gh.json";
+import countries from "@softalxhq/location-selector/data/countries.json";
 ```
 
 ## Other languages (JSON)
@@ -68,23 +68,23 @@ import countries from "@softalx/location-selector/data/countries.json";
 After install, data lives at:
 
 ```text
-node_modules/@softalx/location-selector/data/countries.json
-node_modules/@softalx/location-selector/data/ng.json
-node_modules/@softalx/location-selector/data/gh.json
+node_modules/@softalxhq/location-selector/data/countries.json
+node_modules/@softalxhq/location-selector/data/ng.json
+node_modules/@softalxhq/location-selector/data/gh.json
 ```
 
 Or fetch from a CDN (after publish):
 
 ```text
-https://cdn.jsdelivr.net/npm/@softalx/location-selector/data/ng.json
-https://cdn.jsdelivr.net/npm/@softalx/location-selector/data/gh.json
-https://cdn.jsdelivr.net/npm/@softalx/location-selector/data/countries.json
+https://cdn.jsdelivr.net/npm/@softalxhq/location-selector/data/ng.json
+https://cdn.jsdelivr.net/npm/@softalxhq/location-selector/data/gh.json
+https://cdn.jsdelivr.net/npm/@softalxhq/location-selector/data/countries.json
 ```
 
 ### PHP
 
 ```php
-$gh = json_decode(file_get_contents(__DIR__ . '/node_modules/@softalx/location-selector/data/gh.json'), true);
+$gh = json_decode(file_get_contents(__DIR__ . '/node_modules/@softalxhq/location-selector/data/gh.json'), true);
 $regions = $gh; // list of regions with nested districts → towns
 ```
 
@@ -95,7 +95,7 @@ import json
 from pathlib import Path
 
 gh = json.loads(
-    Path("node_modules/@softalx/location-selector/data/gh.json").read_text()
+    Path("node_modules/@softalxhq/location-selector/data/gh.json").read_text()
 )
 regions = gh
 ```
@@ -104,7 +104,7 @@ regions = gh
 
 ```ruby
 gh = JSON.parse(
-  File.read(Rails.root.join("node_modules/@softalx/location-selector/data/gh.json"))
+  File.read(Rails.root.join("node_modules/@softalxhq/location-selector/data/gh.json"))
 )
 regions = gh
 ```
