@@ -7,9 +7,12 @@ import {
 } from "../src/index.js";
 
 describe("getCountries", () => {
-  it("includes Nigeria", () => {
+  it("includes Nigeria and Ghana", () => {
     const list = getCountries();
-    expect(list).toEqual([{ code: "NG", name: "Nigeria" }]);
+    expect(list).toEqual([
+      { code: "NG", name: "Nigeria" },
+      { code: "GH", name: "Ghana" },
+    ]);
   });
 });
 
