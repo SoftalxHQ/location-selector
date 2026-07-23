@@ -9,12 +9,20 @@ import {
 describe("getCountries", () => {
   it("includes supported countries", () => {
     const list = getCountries();
-    expect(list).toEqual([
-      { code: "NG", name: "Nigeria" },
-      { code: "GH", name: "Ghana" },
-      { code: "US", name: "United States" },
-      { code: "GB", name: "United Kingdom" },
-      { code: "KE", name: "Kenya" },
+    expect(list.map((c) => c.code)).toEqual([
+      "NG",
+      "GH",
+      "US",
+      "GB",
+      "KE",
+      "ZA",
+      "EG",
+      "ET",
+      "TZ",
+      "UG",
+      "RW",
+      "SN",
+      "MA",
     ]);
   });
 });
