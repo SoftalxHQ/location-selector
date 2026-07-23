@@ -8,6 +8,8 @@ JSON is the source of truth — use it from PHP, Python, Ruby on Rails, or any o
 
 ```bash
 npm install @softalx/location-selector
+pnpm add @softalx/location-selector
+yarn add @softalx/location-selector
 ```
 
 ## Hierarchy
