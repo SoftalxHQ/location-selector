@@ -1,6 +1,6 @@
 # @softalxhq/location-selector
 
-![Synkmart Cover](demo.jpg)
+![Location-selecter](./assets/demo.jpg)
 
 Framework-agnostic **country → state/region → LGA/district → town** location data for **Nigeria**, **Ghana**, **Kenya**, **South Africa**, **Egypt**, **Ethiopia**, **Tanzania**, **Uganda**, **Rwanda**, **Senegal**, **Morocco**, plus **United States** and **United Kingdom**.
 
