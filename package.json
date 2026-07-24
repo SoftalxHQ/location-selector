@@ -1,6 +1,6 @@
 {
   "name": "@softalxhq/location-selector",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Framework-agnostic country → state/region → LGA/district → town location data (Africa + US + UK)",
   "license": "MIT",
   "author": "Alex",
