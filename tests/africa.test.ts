@@ -21,13 +21,18 @@ describe("African countries batch", () => {
     }
   });
 
-  it("ZA: 9 provinces, Gauteng includes City of Johannesburg", () => {
+  it("ZA: 9 provinces, Gauteng Sedibeng includes Emfuleni", () => {
     expect(getStates("ZA")).toHaveLength(9);
-    const munis = getLgas("ZA", "Gauteng").map((m) => m.name);
-    expect(munis).toContain("City of Johannesburg");
-    expect(
-      getTowns("ZA", "Gauteng", "City of Johannesburg").length,
-    ).toBeGreaterThan(0);
+    const districts = getLgas("ZA", "Gauteng").map((d) => d.name);
+    expect(districts).toContain("Sedibeng");
+    expect(districts).toContain("City of Johannesburg");
+    expect(getTowns("ZA", "Gauteng", "Sedibeng")).toEqual(
+      expect.arrayContaining(["Emfuleni", "Lesedi", "Midvaal"]),
+    );
+    // wards were numeric in upstream data — third level is municipalities
+    expect(getTowns("ZA", "Gauteng", "Sedibeng").every((t) => !/^\d+$/.test(t))).toBe(
+      true,
+    );
   });
 
   it("EG: 27 governorates including Cairo", () => {

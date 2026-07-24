@@ -1,6 +1,6 @@
 # @softalxhq/location-selector
 
-[![Location selector demo](https://lsdemo.vercel.app/demo.jpg)](https://lsdemo.vercel.app/)
+![Synkmart Cover](demo.jpg)
 
 Framework-agnostic **country → state/region → LGA/district → town** location data for **Nigeria**, **Ghana**, **Kenya**, **South Africa**, **Egypt**, **Ethiopia**, **Tanzania**, **Uganda**, **Rwanda**, **Senegal**, **Morocco**, plus **United States** and **United Kingdom**.
 
@@ -22,30 +22,30 @@ yarn add @softalxhq/location-selector
 
 ## Hierarchy
 
-| Code | Country | `getStates` | `getLgas` | `getTowns` |
-| --- | --- | --- | --- | --- |
-| `NG` | Nigeria | State (37) | LGA | Town |
-| `GH` | Ghana | Region (16) | District / MMDA | Town |
-| `KE` | Kenya | County (47) | Sub-county | Ward |
-| `ZA` | South Africa | Province (9) | Municipality | Ward |
-| `EG` | Egypt | Governorate (27) | District | Shiyakha |
-| `ET` | Ethiopia | Region / city admin | Zone | Woreda |
-| `TZ` | Tanzania | Region (31) | District | Ward |
-| `UG` | Uganda | Region (4) | District | Sub-county |
-| `RW` | Rwanda | Province (5) | District | Sector |
-| `SN` | Senegal | Region (14) | Department | Arrondissement |
-| `MA` | Morocco | Region (10) | Province | Locality |
-| `US` | United States | State (+ DC) | County / Parish | City / town |
-| `GB` | United Kingdom | Country (4) | Local authority | Town / city |
+| Code | Country        | `getStates`         | `getLgas`       | `getTowns`     |
+| ---- | -------------- | ------------------- | --------------- | -------------- |
+| `NG` | Nigeria        | State (37)          | LGA             | Town           |
+| `GH` | Ghana          | Region (16)         | District / MMDA | Town           |
+| `KE` | Kenya          | County (47)         | Sub-county      | Ward           |
+| `ZA` | South Africa   | Province (9)        | District        | Municipality   |
+| `EG` | Egypt          | Governorate (27)    | District        | Shiyakha       |
+| `ET` | Ethiopia       | Region / city admin | Zone            | Woreda         |
+| `TZ` | Tanzania       | Region (31)         | District        | Ward           |
+| `UG` | Uganda         | Region (4)          | District        | Sub-county     |
+| `RW` | Rwanda         | Province (5)        | District        | Sector         |
+| `SN` | Senegal        | Region (14)         | Department      | Arrondissement |
+| `MA` | Morocco        | Region (10)         | Province        | Locality       |
+| `US` | United States  | State (+ DC)        | County / Parish | City / town    |
+| `GB` | United Kingdom | Country (4)         | Local authority | Town / city    |
 
 ## JavaScript / TypeScript
 
 ```ts
 import {
-  getCountries,
-  getStates,
-  getLgas,
-  getTowns,
+	getCountries,
+	getStates,
+	getLgas,
+	getTowns,
 } from "@softalxhq/location-selector";
 
 getCountries();
@@ -53,7 +53,8 @@ getCountries();
 
 getStates("ZA");
 getLgas("ZA", "Gauteng");
-getTowns("ZA", "Gauteng", "City of Johannesburg");
+getTowns("ZA", "Gauteng", "Sedibeng");
+// ["Emfuleni", "Lesedi", "Midvaal"]
 
 getStates("EG");
 getLgas("EG", "Cairo");
@@ -75,7 +76,7 @@ Files also exist for `ng`, `gh`, `ke`, `et`, `tz`, `ug`, `rw`, `sn`, `ma`, `us`,
 
 African admin trees (GH, KE, ZA, EG, ET, TZ, UG, RW, SN, MA) are derived from [Open Admin Data](https://github.com/open-admin-data) country datasets (CC-BY-4.0), transformed into this package’s three-level schema.
 
-- **ZA:** province → municipality → ward (district level omitted)
+- **ZA:** province → district → municipality (electoral ward numbers omitted — upstream wards are numeric IDs, not place names)
 - **UG:** region → district → sub-county (counties flattened)
 
 **United States:** Census counties gazetteer + [kelvins/US-Cities-Database](https://github.com/kelvins/US-Cities-Database).
